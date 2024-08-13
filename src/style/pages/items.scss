@@ -1,0 +1,157 @@
+@mixin select {
+  border: none;
+  outline: none;
+  border: 1px solid #8080803b;
+  padding: 5px 10px;
+  border-radius: 4px;
+  color: $text-gray;
+}
+.customOverlay {
+  background: rgba(36, 123, 160, 0.7);
+}
+.customModal {
+  background: #b2dbbf;
+  max-width: 500px;
+  width: 100%;
+}
+.main_content {
+  .items_page, .supplier_page {
+    margin: 10px 30px;
+    margin-top: 33px;
+    padding: 10px 0;
+    .content {
+      @import "../components/common/common.scss";
+      .data_container {
+        background: $bg-light;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        .container_heading {
+          display: flex;
+          display: -webkit-flex;
+          align-items: center;
+          justify-content: space-between;
+          .search_box {
+            position: relative;
+            top: -6px;
+            .form {
+              position: relative;
+              input {
+                font-size: 16px;
+                border: none;
+                position: absolute;
+                left: 30px;
+                outline: none;
+                &::placeholder {
+                  color: rgba(172, 172, 172, 0.548);
+                }
+              }
+              span {
+                position: absolute;
+                left: 0;
+                top: -1px;
+                color: $text-primary;
+              }
+            }
+          }
+          .show_entries {
+            select {
+              @include select;
+            }
+          }
+        }
+        .table_data {
+          padding: 20px 0;
+          overflow-x: auto;
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: left;
+            tr {
+              padding: 0 10px;
+              th {
+                font-size: 14px;
+                color: $text-light-gray;
+                font-weight: 400;
+                padding: 0 15px;
+              }
+            }
+            tbody {
+              font-size: 14px;
+              color: $text-gray;
+              tr {
+                padding: 0 10px;
+                border-bottom: 1px solid #9d9b9b2b;
+                &:hover {
+                  background: $bg-light-primary;
+                }
+                td {
+                  padding: 10px 15px;
+                  .status_field {
+                    display: flex;
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .status_dropdown {
+                      position: relative;
+                      .status {
+                        background: #def8f3;
+                        padding: 2px 2px;
+                        color: $text-success;
+                        border-radius: 4px;
+                        text-transform: capitalize;
+                        cursor: pointer;
+                      }
+                      .status_panel {
+                        position: absolute;
+                        width: 80px;
+                        right: 0;
+                        background: $bg-light;
+                        list-style: none;
+                        border: 1px solid #80808052;
+                        border-radius: 4px;
+                        padding: 5px;
+                        z-index: 99;
+                        box-shadow: 0px 25px 21px #d5d5d5;
+                        li {
+                          padding: 2px 0;
+                          cursor: pointer;
+                          &:first-child {
+                            border-bottom: 1px solid #a19b9d29;
+                          }
+                        }
+                      }
+                    }
+                    .action {
+                      position: relative;
+                      svg {
+                        width: 21px;
+                        height: 21px;
+                        background: $bg-light;
+                      }
+                      .action_panel {
+                        position: absolute;
+                        right: 0;
+                        width: 150px;
+                        background: white;
+                        z-index: 999;
+                        list-style: none;
+                        border: 1px solid #8080804d;
+                        border-radius: 4px;
+                        li {
+                          padding: 4px 10px;
+                          color: #4e4c4c;
+                          text-transform: capitalize;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

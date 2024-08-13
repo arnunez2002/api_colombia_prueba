@@ -1,0 +1,121 @@
+.body_content {
+  .main_content {
+    .header_wrapper {
+      background: $bg-light;
+      padding: 10px 30px;
+      .header_content {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: space-between;
+        align-items: center;
+        .search_box {
+          position: relative;
+          top: -6px;
+          .form {
+            position: relative;
+            input {
+              font-size: 16px;
+              border: none;
+              position: absolute;
+              left: 30px;
+              outline: none;
+              &::placeholder {
+                color: rgba(172, 172, 172, 0.548);
+              }
+            }
+            span {
+              position: absolute;
+              left: 0;
+              top: -1px;
+              color: $text-primary;
+            }
+          }
+        }
+        .profile {
+          list-style: none;
+          display: flex;
+          display: -webkit-flex;
+          justify-content: flex-end;
+          align-items: center;
+          .report {
+            margin-right: 15px;
+            span {
+              background: $bg-primary;
+            }
+          }
+          li {
+            position: relative;
+            .profile_pic {
+              margin-left: 25px;
+              position: relative;
+              img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50px;
+                cursor: pointer;
+              }
+              .profile_dropdown {
+                position: absolute;
+                right: 0;
+                width: 240px;
+                background: $bg-light;
+                border-radius: 5px;
+                border: 1px solid #8080804a;
+                box-shadow: 0px 6px 10px #dddddd;
+                z-index: 99999;
+
+                ul {
+                  list-style: none;
+                  .drop_image {
+                    border-bottom: 1px solid #8080804a;
+                    .content {
+                      p {
+                        font-size: 14px;
+                        color: gray;
+                      }
+                    }
+                  }
+                  li {
+                    cursor: pointer;
+                    padding: 10px;
+                    .img {
+                      display: flex;
+                      align-items: center;
+                      img {
+                        margin-right: 15px;
+                      }
+                    }
+                    &:last-child {
+                      padding-bottom: 15px;
+                    }
+                    &:hover {
+                      background: whitesmoke;
+                    }
+                  }
+                }
+              }
+            }
+
+            strong {
+              font-size: 30px;
+            }
+            span {
+              position: absolute;
+              top: -3px;
+              right: -3px;
+              background: $bg-success;
+              width: 20px;
+              height: 20px;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50px;
+              color: $text-light;
+            }
+          }
+        }
+      }
+    }
+  }
+}

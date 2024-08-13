@@ -1,0 +1,75 @@
+@mixin button {
+  border: none;
+  outline: none;
+  border: 1px solid #8080803b;
+  padding: 5px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page_heading {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: space-between;
+  .title {
+    h4 {
+      font-size: 30px;
+    }
+  }
+  .right_menu {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: space-between;
+    .filter {
+      margin-right: 15px;
+      button {
+        @include button;
+        background: $bg-light;
+        color: $text-primary;
+        svg {
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+    .add_item {
+      position: relative;
+      button {
+        @include button;
+        background: $bg-primary;
+        color: $text-light;
+        padding: 5px 10px !important;
+        svg {
+          font-size: 18px;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+      .add_dropdown {
+        position: absolute;
+        right: 0;
+        width: 135px;
+        background: #ffffff;
+        list-style: none;
+        top: 35px;
+        border: 1px solid #80808036;
+        border-radius: 8px;
+        li {
+          padding: 8px 20px;
+          color: #464646;
+          font-size: 14px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

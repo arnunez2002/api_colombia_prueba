@@ -1,0 +1,81 @@
+.body_content {
+  .siderbar_content {
+    position: fixed;
+    height: 100%;
+    width: 60px;
+    left: 0;
+    top: 0;
+    font-family: "Noto Sans", sans-serif;
+    background: $bg-primary;
+    z-index: 999;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    &:hover {
+      width: 250px;
+      .sidebar_wrapper {
+        .content {
+          .menu_lists {
+            .logo {
+              span{
+                display: block;
+              }
+              strong {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sidebar_wrapper {
+      padding: 10px 20px;
+      .content {
+        .menu_lists {
+          list-style: none;
+          .menu {
+            a {
+              color: $text-light !important;
+              display: block;
+              text-decoration: none;
+              padding: 10px 0;
+              white-space: nowrap;
+              strong {
+                font-size: 20px;
+                margin-right: 16px;
+              }
+            }
+          }
+          .logo {
+            font-size: 30px;
+            text-align: center;
+            span{
+              display: none;
+            }
+            strong {
+              font-size: 30px !important;
+              display: block;
+              margin-left: -7px;
+            }
+          }
+          .add_auction {
+            font-size: 15px;
+            background: $bg-success;
+            padding: 5px 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            margin: 5px 0 16px -4px;
+            a {
+              padding: 0;
+              strong {
+                margin-right: 18px;
+                font-size: 15px;
+                margin-left: -7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

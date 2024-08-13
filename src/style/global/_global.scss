@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Noto Sans';
+    background: $bg-body;
+}
+.body_content{
+    position: relative;
+    width: 100%;
+}
+.row{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+}
